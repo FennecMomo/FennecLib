@@ -1,4 +1,4 @@
-package com.fennecmomo.momolib.template;
+package com.fennecmomo.momolib.template.Bar;
 
 import java.util.function.IntConsumer;
 
@@ -11,8 +11,8 @@ import net.minecraft.network.chat.Component;
 // 通用滚动条组件——继承 AbstractWidget 直接参与 GUI 渲染。
 // 支持鼠标拖拽滑块和滚轮滚动。
 // 滚动变化通过 IntConsumer 回调通知外部。
-public class W_Scrollbar extends AbstractWidget {
-
+public class ScrollBar extends AbstractWidget
+{
     // ===================== 字段 =====================
     // 滚动回调：参数为新的滚动位置
     private final IntConsumer onScroll;
@@ -28,7 +28,8 @@ public class W_Scrollbar extends AbstractWidget {
     // x, y, w, h: 滚动条的像素位置
     // visibleRows: 列表框同时可见的行数
     // onScroll:    滚动位置变化回调
-    public W_Scrollbar(int x, int y, int w, int h, int visibleRows, IntConsumer onScroll) {
+    public ScrollBar(int x, int y, int w, int h, int visibleRows, IntConsumer onScroll)
+    {
         super(x, y, w, h, Component.empty());
         this.visibleRows = visibleRows;
         this.onScroll = onScroll;
@@ -37,9 +38,11 @@ public class W_Scrollbar extends AbstractWidget {
     // ===================== 公开方法 =====================
     // 设置最大滚动值并钳制当前位置
     // m: 新的最大滚动值
-    public void setMaxScroll(int m) {
+    public void setMaxScroll(int m)
+    {
         maxScroll = m;
-        if (current > m) {
+        if (current > m)
+        {
             current = m;
         }
     }
@@ -47,8 +50,10 @@ public class W_Scrollbar extends AbstractWidget {
     // ===================== 事件处理 =====================
     // 滚轮事件：鼠标在滚动条上或其左侧 152px 列表区域内时响应
     @Override
-    public boolean mouseScrolled(double mx, double my, double sx, double sy) {
-        if (!isMouseOver(mx, my) && !(mx >= getX() - 152 && mx <= getX() && my >= getY() && my <= getY() + height)) {
+    public boolean mouseScrolled(double mx, double my, double sx, double sy)
+    {
+        if (!isMouseOver(mx, my) && !(mx >= getX() - 152 && mx <= getX() && my >= getY() && my <= getY() + height))
+        {
             return false;
         }
         setCurrent(current - (int) Math.signum(sy));
@@ -57,8 +62,10 @@ public class W_Scrollbar extends AbstractWidget {
 
     // 鼠标按下开始拖拽
     @Override
-    public boolean mouseClicked(MouseButtonEvent e, boolean d) {
-        if (e.button() == 0 && isMouseOver(e.x(), e.y())) {
+    public boolean mouseClicked(MouseButtonEvent e, boolean d)
+    {
+        if (e.button() == 0 && isMouseOver(e.x(), e.y()))
+        {
             dragging = true;
             updateFromMouse(e.y());
             return true;
@@ -68,8 +75,10 @@ public class W_Scrollbar extends AbstractWidget {
 
     // 鼠标释放结束拖拽
     @Override
-    public boolean mouseReleased(MouseButtonEvent e) {
-        if (e.button() == 0) {
+    public boolean mouseReleased(MouseButtonEvent e)
+    {
+        if (e.button() == 0)
+        {
             dragging = false;
         }
         return false;
@@ -77,8 +86,10 @@ public class W_Scrollbar extends AbstractWidget {
 
     // 拖拽中持续更新滑块位置
     @Override
-    public boolean mouseDragged(MouseButtonEvent e, double dx, double dy) {
-        if (dragging) {
+    public boolean mouseDragged(MouseButtonEvent e, double dx, double dy)
+    {
+        if (dragging)
+        {
             updateFromMouse(e.y());
         }
         return dragging;
@@ -87,8 +98,10 @@ public class W_Scrollbar extends AbstractWidget {
     // ===================== 内部方法 =====================
     // 根据鼠标Y坐标计算滑块位置
     // 鼠标在轨道上时，滑块中心对齐鼠标
-    private void updateFromMouse(double my) {
-        if (maxScroll <= 0) {
+    private void updateFromMouse(double my)
+    {
+        if (maxScroll <= 0)
+        {
             return;
         }
         int th = height - 2, thumbH = thumbHeight(th);
@@ -98,7 +111,8 @@ public class W_Scrollbar extends AbstractWidget {
 
     // 设置当前滚动位置并触发回调
     // v: 目标滚动值（会被钳制到合法范围）
-    private void setCurrent(int v) {
+    private void setCurrent(int v)
+    {
         current = Math.clamp(v, 0, maxScroll);
         onScroll.accept(current);
     }
@@ -106,8 +120,10 @@ public class W_Scrollbar extends AbstractWidget {
     // ===================== 渲染 =====================
     // 绘制滚动条轨道和滑块
     @Override
-    protected void extractWidgetRenderState(GuiGraphicsExtractor g, int mx, int my, float pt) {
-        if (maxScroll <= 0) {
+    protected void extractWidgetRenderState(GuiGraphicsExtractor g, int mx, int my, float pt)
+    {
+        if (maxScroll <= 0)
+        {
             return;
         }
         int x = getX(), y = getY(), h = height;
@@ -115,7 +131,8 @@ public class W_Scrollbar extends AbstractWidget {
         g.fill(x, y, x + width, y + h, 0xFF333333);
         int th = h - 2, thumbH = thumbHeight(th), thumbY = y + 1;
         // 根据当前滚动位置计算滑块 Y 坐标
-        if (maxScroll > 0) {
+        if (maxScroll > 0)
+        {
             thumbY += (int) ((th - thumbH) * (float) current / maxScroll);
         }
         // 滑块（拖拽中变亮）
@@ -123,12 +140,14 @@ public class W_Scrollbar extends AbstractWidget {
     }
 
     // 计算滑块高度：占比 = 可见行 / 总行数，最小 8px
-    private int thumbHeight(int th) {
+    private int thumbHeight(int th)
+    {
         return Math.max(8, th * visibleRows / (maxScroll + visibleRows));
     }
 
     // 无障碍叙述（滚动条无需）
     @Override
-    protected void updateWidgetNarration(NarrationElementOutput o) {
+    protected void updateWidgetNarration(NarrationElementOutput o)
+    {
     }
 }

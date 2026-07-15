@@ -1,9 +1,10 @@
-package com.fennecmomo.momolib.template;
+package com.fennecmomo.momolib.template.Interface;
 
 // 滚动列表条目的统一接口。
-// 所有可放入 W_EntryList 的组件（按钮、输入框、文本、进度条）都要实现此接口。
+// 所有可放入 ContentList 的组件（按钮、输入框、文本、进度条）都要实现此接口。
 // 列表通过 activate/deactivate 控制条目可见性，通过 setEntryPosition 控制位置。
-public interface I_Entry {
+public interface IListItem
+{
     // ===================== 布局控制 =====================
 
     // 设置条目宽度（列表刷新时调用）。

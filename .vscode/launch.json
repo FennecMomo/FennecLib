@@ -16,7 +16,7 @@
       ],
       "vmArgs": [
         "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmomolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
+        "-Dfml.modFolders\u003dFM_momolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\..\\run-shared",
       "env": {},
@@ -38,7 +38,7 @@
       ],
       "vmArgs": [
         "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmomolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
+        "-Dfml.modFolders\u003dFM_momolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\..\\run-shared",
       "env": {},

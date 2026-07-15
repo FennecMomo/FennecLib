@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - momolib",
+        "order": 0
+      },
+      "projectName": "momolib",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmomolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\..\\run-shared",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - momolib",
+        "order": 1
+      },
+      "projectName": "momolib",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmomolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\..\\run-shared",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

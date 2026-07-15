@@ -68,6 +68,11 @@ public class C_Container
     // 热键栏区域起始 Y 坐标
     public int hotbarY() { return playerY() + PLAYER_ROWS * SLOT; }
 
+    // 静态布局工具：给定行数算各区域起始 Y
+    public static int containerYForRows(int rows) { return PAD + TITLE_H; }
+    public static int playerYForRows(int rows) { return containerYForRows(rows) + rows * SLOT + GAP; }
+    public static int hotbarYForRows(int rows) { return playerYForRows(rows) + PLAYER_ROWS * SLOT; }
+
     // 添加容器格子到 GUI
     // factory：可选的自定义格子工厂（null则用默认 Slot）
     public void addContainerSlots(java.util.function.Consumer<Slot> adder, SlotFactory factory)

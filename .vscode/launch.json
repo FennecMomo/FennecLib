@@ -6,17 +6,17 @@
       "request": "launch",
       "name": "Client",
       "presentation": {
-        "group": "Mod Development - momolib",
+        "group": "Mod Development - fm_momolib",
         "order": 0
       },
-      "projectName": "momolib",
+      "projectName": "fm_momolib",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\clientRunProgramArgs.txt"
+        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dFM_momolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
+        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dfm_fm_momolib%%D:\\ModProduce\\MaidTown\\fm_momolib\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\..\\run-shared",
       "env": {},
@@ -28,17 +28,17 @@
       "request": "launch",
       "name": "Server",
       "presentation": {
-        "group": "Mod Development - momolib",
+        "group": "Mod Development - fm_momolib",
         "order": 1
       },
-      "projectName": "momolib",
+      "projectName": "fm_momolib",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\serverRunProgramArgs.txt"
+        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\ModProduce\\MaidTown\\momolib\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dFM_momolib%%D:\\ModProduce\\MaidTown\\momolib\\bin\\main"
+        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dfm_fm_momolib%%D:\\ModProduce\\MaidTown\\fm_momolib\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\..\\run-shared",
       "env": {},

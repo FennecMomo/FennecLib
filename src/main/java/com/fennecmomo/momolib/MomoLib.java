@@ -13,7 +13,7 @@ public class MomoLib
     // ===================== 常量 =====================
 
     // 模组唯一标识符，用于注册表命名空间、资源路径等
-    public static final String MODID = "FM_momolib";
+    public static final String MODID = "momolib";
 
     // ===================== 构造器 =====================
     // 模组初始化入口，注册所有服务端内容（菜单、方块、物品等）。

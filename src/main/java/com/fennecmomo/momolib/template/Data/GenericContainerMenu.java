@@ -1,5 +1,6 @@
 package com.fennecmomo.momolib.template.Data;
 
+import com.fennecmomo.momolib.MomoLibConfig;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -156,7 +157,7 @@ public abstract class GenericContainerMenu extends AbstractContainerMenu
         if (index < slotCount)
         {
             // 容器 → 玩家
-            if (!moveItemStackTo(original, slotCount, slotCount + 36, true))
+            if (!moveItemStackTo(original, slotCount, slotCount + MomoLibConfig.PLAYER_INVENTORY_SIZE, true))
             {
                 return ItemStack.EMPTY;
             }

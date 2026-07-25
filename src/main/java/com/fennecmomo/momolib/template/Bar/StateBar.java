@@ -2,6 +2,7 @@ package com.fennecmomo.momolib.template.Bar;
 
 import java.util.function.Consumer;
 
+import com.fennecmomo.momolib.MomoLibConfig;
 import com.fennecmomo.momolib.template.Interface.IBar;
 import com.fennecmomo.momolib.template.Interface.IListItem;
 
@@ -34,7 +35,7 @@ public class StateBar extends AbstractWidget implements IListItem
     // 状态名称
     private String label;
     // 当前值和最大值
-    private float value, max = 100f;
+    private float value, max = MomoLibConfig.BAR_DEFAULT_MAX;
     // 数值显示格式
     private Fmt fmt = Fmt.RATIO;
     // 标签和数值的文字颜色
@@ -141,7 +142,10 @@ public class StateBar extends AbstractWidget implements IListItem
     protected void extractWidgetRenderState(GuiGraphicsExtractor g, int mx, int my, float pt)
     {
         int x = getX(), y = getY(), w = getWidth(), h = getHeight();
-        int lw = w * 2 / 9, vw = w * 2 / 9, sw = w / 9, bw = w - lw - vw - sw;
+        int lw = w * MomoLibConfig.BAR_LABEL_RATIO / MomoLibConfig.BAR_TOTAL_RATIO;
+        int vw = w * MomoLibConfig.BAR_VALUE_RATIO / MomoLibConfig.BAR_TOTAL_RATIO;
+        int sw = w * MomoLibConfig.BAR_GAP_RATIO / MomoLibConfig.BAR_TOTAL_RATIO;
+        int bw = w - lw - vw - sw;
 
         // 标签
         g.text(font, Component.literal(label).withStyle(Style.EMPTY.withColor(labelColor & 0xFFFFFF)),
@@ -150,7 +154,7 @@ public class StateBar extends AbstractWidget implements IListItem
         // 数值文本
         String vs = valOverride != null ? valOverride : switch (fmt)
         {
-            case RATIO -> String.format("%.0f%%", value / max * 100);
+            case RATIO -> String.format("%.0f%%", value / max * MomoLibConfig.BAR_PERCENT_MULTIPLIER);
             case INTEGER -> String.format("%.0f/%.0f", value, max);
             case EXP -> String.format("%.0f/%.0f", value, max);
         };

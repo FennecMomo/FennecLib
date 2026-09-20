@@ -1,6 +1,6 @@
-package com.fennecmomo.momolib.template.Interface;
+package com.fennecmomo.fenneclib.template.Interface;
 
-import com.fennecmomo.momolib.MomoLibConfig;
+import com.fennecmomo.fenneclib.FennecLibConfig;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 // 进度条渲染器——把 0~1 的值画成彩色条。
@@ -19,9 +19,9 @@ public interface IBar
     IBar DEFAULT = (g, x, y, w, h, v) ->
     {
         int f = Math.round(v * w);
-        int c = v > MomoLibConfig.BAR_COLOR_GREEN_THRESHOLD ? 0xFF55FF55
-                : v > MomoLibConfig.BAR_COLOR_ORANGE_THRESHOLD ? 0xFFAA5500 : 0xFFFF5555;
-        int pad = MomoLibConfig.BAR_VERTICAL_PADDING;
+        int c = v > FennecLibConfig.BAR_COLOR_GREEN_THRESHOLD ? 0xFF55FF55
+                : v > FennecLibConfig.BAR_COLOR_ORANGE_THRESHOLD ? 0xFFAA5500 : 0xFFFF5555;
+        int pad = FennecLibConfig.BAR_VERTICAL_PADDING;
         g.fill(x, y + pad, x + w, y + h - pad, 0xFF333333);
         g.fill(x, y + pad, x + f, y + h - pad, c);
     };

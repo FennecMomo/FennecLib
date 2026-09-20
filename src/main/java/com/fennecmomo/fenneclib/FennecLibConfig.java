@@ -1,9 +1,9 @@
-package com.fennecmomo.momolib;
+package com.fennecmomo.fenneclib;
 
-// MomoLib 可配置常量集中管理
-public final class MomoLibConfig
+// FennecLib 可配置常量集中管理
+public final class FennecLibConfig
 {
-    private MomoLibConfig() {}
+    private FennecLibConfig() {}
 
     // ===================== StateBar =====================
 

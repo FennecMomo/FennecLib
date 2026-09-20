@@ -1,9 +1,9 @@
-package com.fennecmomo.momolib.template.List;
+package com.fennecmomo.fenneclib.template.List;
 
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import com.fennecmomo.momolib.template.Interface.IListItem;
+import com.fennecmomo.fenneclib.template.Interface.IListItem;
 
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.components.AbstractWidget;

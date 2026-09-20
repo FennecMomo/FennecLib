@@ -1,7 +1,7 @@
-package com.fennecmomo.momolib.template.Register;
+package com.fennecmomo.fenneclib.template.Register;
 
-import com.fennecmomo.momolib.MomoLib;
-import com.fennecmomo.momolib.template.Data.ConfirmPopupMenu;
+import com.fennecmomo.fenneclib.FennecLib;
+import com.fennecmomo.fenneclib.template.Data.ConfirmPopupMenu;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
@@ -18,7 +18,7 @@ public class TemplateRegistration
 
     // 菜单类型注册表
     static final DeferredRegister<MenuType<?>> MENUS
-        = DeferredRegister.create(Registries.MENU, MomoLib.MODID);
+        = DeferredRegister.create(Registries.MENU, FennecLib.MODID);
 
     // 确认弹窗菜单类型
     public static final DeferredHolder<MenuType<?>, MenuType<ConfirmPopupMenu>> CONFIRM_MENU

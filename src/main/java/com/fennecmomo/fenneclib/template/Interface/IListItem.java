@@ -1,4 +1,4 @@
-package com.fennecmomo.momolib.template.Interface;
+package com.fennecmomo.fenneclib.template.Interface;
 
 // 滚动列表条目的统一接口。
 // 所有可放入 ContentList 的组件（按钮、输入框、文本、进度条）都要实现此接口。

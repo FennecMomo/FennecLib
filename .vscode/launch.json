@@ -6,17 +6,17 @@
       "request": "launch",
       "name": "Client",
       "presentation": {
-        "group": "Mod Development - fm_momolib",
+        "group": "Mod Development - fenneclib",
         "order": 0
       },
-      "projectName": "fm_momolib",
+      "projectName": "fenneclib",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\clientRunProgramArgs.txt"
+        "@D:\\ModProduce\\MaidTown\\fenneclib\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dfm_fm_momolib%%D:\\ModProduce\\MaidTown\\fm_momolib\\bin\\main"
+        "@D:\\ModProduce\\MaidTown\\fenneclib\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dfenneclib%%D:\\ModProduce\\MaidTown\\fenneclib\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\..\\run-shared",
       "env": {},
@@ -28,17 +28,17 @@
       "request": "launch",
       "name": "Server",
       "presentation": {
-        "group": "Mod Development - fm_momolib",
+        "group": "Mod Development - fenneclib",
         "order": 1
       },
-      "projectName": "fm_momolib",
+      "projectName": "fenneclib",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\serverRunProgramArgs.txt"
+        "@D:\\ModProduce\\MaidTown\\fenneclib\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\ModProduce\\MaidTown\\fm_momolib\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dfm_fm_momolib%%D:\\ModProduce\\MaidTown\\fm_momolib\\bin\\main"
+        "@D:\\ModProduce\\MaidTown\\fenneclib\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dfenneclib%%D:\\ModProduce\\MaidTown\\fenneclib\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\..\\run-shared",
       "env": {},

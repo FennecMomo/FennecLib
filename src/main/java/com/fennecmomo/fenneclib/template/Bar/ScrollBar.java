@@ -1,4 +1,4 @@
-package com.fennecmomo.momolib.template.Bar;
+package com.fennecmomo.fenneclib.template.Bar;
 
 import java.util.function.IntConsumer;
 

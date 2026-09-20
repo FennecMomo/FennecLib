@@ -1,4 +1,4 @@
-# MomoLib
+# FennecLib
 
 MaidTown 模组系列的基础库，为女仆工作系统提供通用框架组件。
 
@@ -18,4 +18,4 @@ MaidTown 模组系列的基础库，为女仆工作系统提供通用框架组�
 ./gradlew build
 ```
 
-产物在 `build/libs/momolib-0.0.1.jar`
+产物在 `build/libs/fenneclib-0.0.1.jar`

@@ -1,6 +1,6 @@
-package com.fennecmomo.momolib.template.Data;
+package com.fennecmomo.fenneclib.template.Data;
 
-import com.fennecmomo.momolib.template.Register.TemplateRegistration;
+import com.fennecmomo.fenneclib.template.Register.TemplateRegistration;
 
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;

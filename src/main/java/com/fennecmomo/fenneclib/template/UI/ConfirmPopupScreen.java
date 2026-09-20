@@ -1,6 +1,6 @@
-package com.fennecmomo.momolib.template.UI;
+package com.fennecmomo.fenneclib.template.UI;
 
-import com.fennecmomo.momolib.template.Data.ConfirmPopupMenu;
+import com.fennecmomo.fenneclib.template.Data.ConfirmPopupMenu;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;

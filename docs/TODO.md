@@ -1,4 +1,4 @@
-# MomoLib TODO
+# FennecLib TODO
 
 ## behavior — 加权算法框架解耦
 
@@ -17,5 +17,5 @@
 
 ### 涉及文件
 
-- `momolib/behavior/WeightedChildBehavior.java` — 当前继承 `Behavior<EntityMaid>`
-- `momolib/behavior/WeightedPicker.java` — 当前继承 `Behavior<EntityMaid>`
+- `fenneclib/behavior/WeightedChildBehavior.java` — 当前继承 `Behavior<EntityMaid>`
+- `fenneclib/behavior/WeightedPicker.java` — 当前继承 `Behavior<EntityMaid>`

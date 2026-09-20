@@ -1,4 +1,4 @@
-# MomoLib 公开 API 参考
+# FennecLib 公开 API 参考
 
 > 本文档仅列出允许外部模块调用的 API，内部实现类不在此列。
 
@@ -11,7 +11,7 @@
 继承此类编写可被 WeightedPicker 调度的女仆 AI 行为。
 
 ```java
-import com.fennecmomo.momolib.behavior.WeightedChildBehavior;
+import com.fennecmomo.fenneclib.behavior.WeightedChildBehavior;
 ```
 
 #### 构造（无时长限制）
@@ -63,7 +63,7 @@ public void end(ServerLevel level, EntityMaid maid, long time)
 放入一组 WeightedChildBehavior，每次启动时按权重轮盘赌随机选一个独占执行。
 
 ```java
-import com.fennecmomo.momolib.behavior.WeightedPicker;
+import com.fennecmomo.fenneclib.behavior.WeightedPicker;
 ```
 
 #### 构造
@@ -95,7 +95,7 @@ public void register(WeightedChildBehavior b)
 服务端发起、客户端渲染的双按钮模态对话框，用于让玩家确认/拒绝某个操作。
 
 ```java
-import com.fennecmomo.momolib.template.Data.ConfirmPopupMenu;
+import com.fennecmomo.fenneclib.template.Data.ConfirmPopupMenu;
 ```
 
 #### 调起双按钮确认弹窗
@@ -123,7 +123,7 @@ public static void open(ServerPlayer player, String title, String info, String l
 继承 AbstractContainerMenu，封装动态行列布局、槽位自动添加和 Shift 点击转移。子类只需传入行列数和容器即可使用。
 
 ```java
-import com.fennecmomo.momolib.template.Data.GenericContainerMenu;
+import com.fennecmomo.fenneclib.template.Data.GenericContainerMenu;
 ```
 
 #### 构造
@@ -191,7 +191,7 @@ public boolean stillValid(Player player)
 继承 AbstractContainerScreen，配合 GenericContainerMenu 使用。内置蒙版、灰色面板、边框和标题渲染。
 
 ```java
-import com.fennecmomo.momolib.template.UI.GenericContainerScreen;
+import com.fennecmomo.fenneclib.template.UI.GenericContainerScreen;
 ```
 
 #### 构造
@@ -215,7 +215,7 @@ public GenericContainerScreen(T menu, Inventory inv, Component title)
 所有放入 ContentList 的组件必须实现此接口。
 
 ```java
-import com.fennecmomo.momolib.template.Interface.IListItem;
+import com.fennecmomo.fenneclib.template.Interface.IListItem;
 ```
 
 ```java
@@ -237,7 +237,7 @@ void deactivate()
 定义进度条的绘制方式，StateBar 组合使用。
 
 ```java
-import com.fennecmomo.momolib.template.Interface.IBar;
+import com.fennecmomo.fenneclib.template.Interface.IBar;
 ```
 
 ```java
@@ -265,7 +265,7 @@ void draw(GuiGraphicsExtractor g, int x, int y, int w, int h, float value)
 管理一组 IListItem，配合内置 ScrollBar 实现虚拟滚动（只渲染可见行）。
 
 ```java
-import com.fennecmomo.momolib.template.List.ContentList;
+import com.fennecmomo.fenneclib.template.List.ContentList;
 ```
 
 #### 构造
@@ -303,7 +303,7 @@ public boolean mouseScrolled(double mx, double my, double sx, double sy)
 支持三种模式：纯按钮、文本+按钮、纯文本。实现 IListItem 可放入 ContentList。
 
 ```java
-import com.fennecmomo.momolib.template.List.ButtonListItem;
+import com.fennecmomo.fenneclib.template.List.ButtonListItem;
 ```
 
 #### 构造（纯按钮）
@@ -357,7 +357,7 @@ public void setTextColor(int c)
 包装原版 EditBox 为 IListItem，可放入 ContentList。
 
 ```java
-import com.fennecmomo.momolib.template.List.InputListItem;
+import com.fennecmomo.fenneclib.template.List.InputListItem;
 ```
 
 #### 构造
@@ -389,7 +389,7 @@ public void setMaxLength(int n)
 显示"标签 + 数值 + 进度条"三栏，用于属性展示。实现 IListItem 可放入 ContentList。
 
 ```java
-import com.fennecmomo.momolib.template.Bar.StateBar;
+import com.fennecmomo.fenneclib.template.Bar.StateBar;
 ```
 
 #### 构造

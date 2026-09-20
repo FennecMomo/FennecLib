@@ -1,4 +1,4 @@
-package com.fennecmomo.momolib.behavior;
+package com.fennecmomo.fenneclib.behavior;
 
 import java.util.Map;
 

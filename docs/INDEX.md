@@ -1,4 +1,4 @@
-# MomoLib 文档
+# FennecLib 文档
 
 > 版本：0.0.1 | MC 26.1.2 / NeoForge | JDK 25
 
@@ -14,8 +14,8 @@ MaidTown 模组系列的基础库，提供 AI 行为框架和 UI 模板组件。
 ## 包结构
 
 ```
-com.fennecmomo.momolib/
-  MomoLib.java                          # @Mod 入口
+com.fennecmomo.fenneclib/
+  FennecLib.java                          # @Mod 入口
   behavior/
     WeightedPicker.java                 # 加权随机行为容器
     WeightedChildBehavior.java          # 加权子行为基类

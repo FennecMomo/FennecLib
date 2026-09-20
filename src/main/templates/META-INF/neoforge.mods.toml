@@ -7,7 +7,7 @@ modId = "${mod_id}"
 version = "${mod_version}"
 displayName = "${mod_name}"
 description = '''
-MomoLib — 漠漠模组通用前置库。
+FennecLib — 漠漠模组通用前置库。
 提供加权行为框架（Behavior 权重随机选择）和 UI 模板组件库（容器、滚动条、输入框、按钮等）。
 依赖 TLM（Touhou Little Maid）。
 '''

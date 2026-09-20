@@ -9,6 +9,7 @@ MaidTown 模组系列的基础库，提供 AI 行为框架和 UI 模板组件。
 | 文档 | 说明 |
 |------|------|
 | [API.md](API.md) | 公开 API 参考：WeightedPicker/WeightedChildBehavior、ConfirmPopup、GenericContainerMenu/Screen、ContentList、StateBar 等 |
+| [CHANGELOG.md](CHANGELOG.md) | 版本更新记录（仅作者明确要求时记录） |
 | [TODO.md](TODO.md) | 待办：加权算法框架与 TLM Behavior 解耦 |
 
 ## 包结构

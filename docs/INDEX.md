@@ -17,11 +17,11 @@ MaidTown 模组系列的基础库，提供 AI 行为框架和 UI 模板组件。
 ```
 com.fennecmomo.fenneclib/
   FennecLib.java                          # @Mod 入口
+  FennecLibConfig.java                    # 配置常量
   behavior/
     WeightedPicker.java                 # 加权随机行为容器
     WeightedChildBehavior.java          # 加权子行为基类
   template/
-    API.md                              # 公开 API 文档
     Bar/
       ScrollBar.java                    # 滚动条组件
       StateBar.java                     # 状态条（标签+数值+进度）
